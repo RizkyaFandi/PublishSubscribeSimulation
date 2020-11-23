@@ -1,0 +1,56 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="720" Width="1280">
+    <Grid>
+        <Label x:Name="labelUser" Content="Select User" HorizontalAlignment="Left" Margin="50,40,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label x:Name="labelPublish" Content="Subscribe to?" HorizontalAlignment="Left" Margin="50,164,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.677,0.362" FontWeight="Bold"/>
+        <RadioButton x:Name="radio1" Content="User 1" HorizontalAlignment="Left" Margin="69,71,0,0" VerticalAlignment="Top" Checked="radio1_Checked"/>
+        <RadioButton x:Name="radio2" Content="User 2" HorizontalAlignment="Left" Margin="69,91,0,0" VerticalAlignment="Top" Checked="radio2_Checked"/>
+        <RadioButton x:Name="radio3" Content="User 3" HorizontalAlignment="Left" Margin="69,111,0,0" VerticalAlignment="Top" Checked="radio3_Checked"/>
+        <RadioButton x:Name="radio4" Content="User 4" HorizontalAlignment="Left" Margin="69,131,0,0" VerticalAlignment="Top" Checked="radio4_Checked"/>
+        <CheckBox x:Name="check1" Content="User 1" HorizontalAlignment="Left" Margin="69,195,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="check2" Content="User 2" HorizontalAlignment="Left" Margin="69,215,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="check3" Content="User 3" HorizontalAlignment="Left" Margin="69,235,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="check4" Content="User 4" HorizontalAlignment="Left" Margin="69,255,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelPublish1" Content="Publish a Message" HorizontalAlignment="Left" Margin="50,331,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBox x:Name="textMessage" HorizontalAlignment="Left" Height="95" Margin="57,362,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="212"/>
+        <Button x:Name="buttonPublish" Content="Publish" HorizontalAlignment="Left" Margin="63,469,0,0" VerticalAlignment="Top" Width="75" Click="buttonPublish_Click" Background="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" Foreground="{DynamicResource {x:Static SystemColors.ControlLightLightBrushKey}}" BorderThickness="0" Cursor="Hand">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="1" Opacity="0.3" ShadowDepth="1"/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="buttonConfirm" Content="Confirm" HorizontalAlignment="Left" Margin="63,287,0,0" VerticalAlignment="Top" Width="75" Click="buttonConfirm_Click" BorderThickness="0" Background="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" BorderBrush="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" Foreground="White" Cursor="Hand">
+            <Button.Effect>
+                <DropShadowEffect Opacity="0.3" BlurRadius="1" ShadowDepth="1"/>
+            </Button.Effect>
+        </Button>
+        <Label x:Name="labelUser1" Content="User 1 Info" HorizontalAlignment="Left" Margin="375,40,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label x:Name="label_Subscribers" Content="Subscribers" HorizontalAlignment="Left" Margin="375,81,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="resultSubscribers1" Content="None" HorizontalAlignment="Left" Margin="391,101,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelMessage" Content="Message Received" HorizontalAlignment="Left" Margin="375,146,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textMessage1" HorizontalAlignment="Left" Height="175" Margin="391,177,0,0" TextWrapping="Wrap" Text="None" VerticalAlignment="Top" Width="304"/>
+        <Label x:Name="labelUser2" Content="User 2 Info" HorizontalAlignment="Left" Margin="862,44,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label x:Name="label_Subscribers2" Content="Subsribers" HorizontalAlignment="Left" Margin="862,85,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="resultSubscribers2" Content="None" HorizontalAlignment="Left" Margin="878,105,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelMessage2" Content="Message Received" HorizontalAlignment="Left" Margin="862,150,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textMessage2" HorizontalAlignment="Left" Height="171" Margin="878,181,0,0" TextWrapping="Wrap" Text="None" VerticalAlignment="Top" Width="332"/>
+        <Label x:Name="labelUser3" Content="User 3 Info" HorizontalAlignment="Left" Margin="375,357,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label x:Name="label_Subscribers3" Content="Subscribers" HorizontalAlignment="Left" Margin="375,398,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="resultSubscribers3" Content="None" HorizontalAlignment="Left" Margin="391,418,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelMessage3" Content="Message Received" HorizontalAlignment="Left" Margin="375,463,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textMessage3" HorizontalAlignment="Left" Height="174" Margin="391,494,0,0" TextWrapping="Wrap" Text="None" VerticalAlignment="Top" Width="304"/>
+        <Label x:Name="labelUser4" Content="User 4 Info" HorizontalAlignment="Left" Margin="862,357,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label x:Name="label_Subscribers4" Content="Subscribers" HorizontalAlignment="Left" Margin="862,398,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="resultSubscribers4" Content="None" HorizontalAlignment="Left" Margin="878,418,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelMessage4" Content="Message Received" HorizontalAlignment="Left" Margin="862,463,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textMessage4" HorizontalAlignment="Left" Height="174" Margin="878,494,0,0" TextWrapping="Wrap" Text="None" VerticalAlignment="Top" Width="332"/>
+        <RadioButton x:Name="radioFast" Content="Fast Refresh(Refresh after all threads start running)" HorizontalAlignment="Left" Margin="69,540,0,0" VerticalAlignment="Top" GroupName="RefreshType"/>
+        <RadioButton x:Name="radioSlow" Content="Slow Refresh(Refresh after all messages has sent)" HorizontalAlignment="Left" Margin="69,560,0,0" VerticalAlignment="Top" GroupName="RefreshType"/>
+        <Label x:Name="labelRefresh" Content="Refresh Type" HorizontalAlignment="Left" Margin="50,509,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+    </Grid>
+</Window>
